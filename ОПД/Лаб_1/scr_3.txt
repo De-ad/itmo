@@ -1,0 +1,32 @@
+cd lab0/
+cat skorupi2 > rhyhorn4/growlitheskorupi
+chmod 700 rhyhorn4 
+chmod 700 rhyhorn4/vulpix
+chmod 700 riolu5
+cp riolu5 rhyhorn4/vulpix
+ln -s riolu5 porygon3/dusclopsriolu
+chmod 700 mienshao3/
+ln riolu5 mienshao3/servineriolu
+chmod 700 rhyhorn4/leavanny
+chmod 700 rhyhorn4/vaporeon
+chmod 700 rhyhorn4/growlithe
+cp -r rhyhorn4/leavanny/ rhyhorn4/grovyle
+cp -r rhyhorn4/nidorino/ rhyhorn4/grovyle
+cp -r rhyhorn4/vaporeon/ rhyhorn4/grovyle
+cp -r rhyhorn4/vulpix/ rhyhorn4/grovyle
+cp -r rhyhorn4/growlithe rhyhorn4/grovyle
+ln -s riolu5 mienshao3/Copy_28
+chmod 700 rhyhorn4/grovyle/vulpix
+chmod 700 mienshao3/kingdra 
+chmod 700 porygon3/
+chmod 700 porygon3/chansey
+cat mienshao3/kingdra porygon3/chansey > skorupi2_64
+chmod 307 rhyhorn4/leavanny
+chmod u=wx,g=wx,o=wx rhyhorn4/vaporeon
+chmod u=wx,g=x,o=w rhyhorn4/vulpix
+chmod 006 rhyhorn4/growlithe
+chmod u-rwx,g=rw,o-rwx mienshao3/kingdra
+chmod u=rx,g=rwx,o=rwx mienshao3
+chmod u-rwx,g=rw,o=w porygon3/chansey
+chmod 317 porygon3
+chmod 404 riolu5

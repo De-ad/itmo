@@ -1,0 +1,7 @@
+cd lab0/
+wc -l *n */*n 1>> /tmp/s334512/file_1 2>&1
+ls -Rl | grep "n$" | tail -3 | sort -k5
+cat -n skorupi2 | grep -v "e$"
+wc -l mienshao3/servine mienshao3/kingdra mienshao3/fearow porygon3/nidoking porygon3/chansey porygon3/dusclops 1>> /tmp/s334512/file_2
+ls -atr rhyhorn4 2> /dev/null
+sort mienshao3/* 2> /tmp/s334512/file_3

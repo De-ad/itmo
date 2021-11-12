@@ -1,0 +1,9 @@
+cd lab0/
+rm -rf riolu5
+chmod 700 rhyhorn4
+chmod 700 rhyhorn4/vulpix
+rm -rf porygon3/nidoking
+rm -rf porygon3/dusclopsrio*
+rm -rf mienshao3/servinerio*
+rm -rf rhyhorn4/vulpix
+rm -rf rhyhorn4

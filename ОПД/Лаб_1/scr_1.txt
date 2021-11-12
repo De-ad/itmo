@@ -1,0 +1,14 @@
+mkdir lab0
+cd lab0
+mkdir -p mienshao3/dodrio porygon3/ferrothorn porygon3/cinccino rhyhorn4/nidorino rhyhorn4/leavanny rhyhorn4/vaporeon rhyhorn4/vulpix rhyhorn4/grovyle
+echo "Способности Leer Vive Whip Wrap Growth Leaf Tornado Leech \nSeed Mega Drain Slam Leaf Blade Coil Giga Drain Wring Out Gastro Acid \nLeaf Storm" > mienshao3/servine
+echo "Живет  Ocean" > mienshao3/kingdra
+echo "Возможности  Overland=6 \nSurface=1 Sky=10 Jump=3 Power4=0 Intelligence=4" > mienshao3/fearow 
+echo "Тип диеты \nOmnivore" > porygon3/nidoking 
+echo "Живет  Glassland Urban" > porygon3/chansey
+echo "Ходы  Bind Body \nSlam counter Dark Pulse Double-Edge Dynamicpunch Fire Punch Focus \nPunch Gravity Ice Punch Icy Wind Mega Kick Mega Punch Metronome \nMud-Slap Ominous Wind Pain Split Seismic Toss Skill Swap Sleep Talk \nSnatch Snore Spite Sucker Punch Thunderpunch Trick Wonder \nRoom" > porygon3/dusclops
+echo "Способности  Torrent Landslide Dry Skin\nDamp" > porygon3/marshtomp
+echo "Развитые способности  Justified" > rhyhorn4/growlithe 
+echo "Способности \nEndure Foresight Quick Attack Counter Feint Force Palm Copycat Screech n\Reversal Nasty Plot Final Gambit" > riolu5
+echo "satk=4 sdef=7 \nspd=5" > scraggy1
+echo "Живет  Forest Marsh Rainforest" > skorupi2

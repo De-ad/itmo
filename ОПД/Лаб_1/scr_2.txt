@@ -1,0 +1,23 @@
+cd lab0/
+chmod u=rx,g=rwx,o=rwx mienshao3
+chmod u=r,g=r,o-rwx mienshao3/servine
+chmod u-rwx,g=rw,o-rwx mienshao3/kingdra
+chmod u=wx,g=wx,o=rx mienshao3/dodrio
+chmod 006 mienshao3/fearow
+chmod 317 porygon3
+chmod u=rw,g-rwx,o=r porygon3/nidoking
+chmod u-rwx,g=rw,o=w porygon3/chansey
+chmod u=rx,g=x,o=wx porygon3/ferrothorn
+chmod u=rx,g=rwx,o=wx porygon3/cinccino
+chmod 066 porygon3/dusclops
+chmod 060 porygon3/marshtomp 
+chmod 317 rhyhorn4
+chmod 751 rhyhorn4/nidorino
+chmod 307 rhyhorn4/leavanny
+chmod u=wx,g=wx,o=wx rhyhorn4/vaporeon
+chmod u=wx,g=x,o=w rhyhorn4/vulpix
+chmod 006 rhyhorn4/growlithe
+chmod u=rwx,g=wx,o=rwx rhyhorn4/grovyle
+chmod 404 riolu5
+chmod 400 scraggy1
+chmod 400 skorupi2
