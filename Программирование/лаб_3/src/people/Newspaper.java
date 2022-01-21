@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class Newspaper implements Printable {
     private String pressType = "Газеты";
+    private int random = new Random().nextInt(pressAction.values().length)
 
     @Override
     public String getType() {
@@ -14,7 +15,7 @@ public class Newspaper implements Printable {
     @Override
     public void getMessage(String message){
         String actionType;
-        pressAction action = pressAction.values()[new Random().nextInt(pressAction.values().length)];
+        pressAction action = pressAction.values()[random];
         System.out.println(pressType + " " + action.getName() + message);
     }
 
