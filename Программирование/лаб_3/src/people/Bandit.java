@@ -1,10 +1,7 @@
 package people;
 
 public class Bandit extends Character {
-    public Bandit(){
-        String name = "бандит";
-    }
-
+    
     public Bandit(String name) {
         super(name);
     }
