@@ -6,10 +6,6 @@ public class Policeman extends Character {
         super(name);
     }
 
-    public Policeman(){
-        String name = "полицейский комиссар ";
-    }
-
     @Override
     public String getName() {
         return name;
