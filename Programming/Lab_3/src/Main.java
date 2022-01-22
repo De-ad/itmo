@@ -1,6 +1,3 @@
-import people.*;
-import people.Character;
-
 //Полицейский комиссар сказал, что все это увертки, так как отличить полицейского от бандита не так уж трудно.
 //В ответ на это стрелявший из пистолета сказал, что теперешнего полицейского не отличишь от бандита,
 //так как полицейские часто действуют заодно с бандитами, бандиты же переодеваются в полицейскую форму, чтоб удобнее
@@ -9,29 +6,47 @@ import people.Character;
 //банка сумма очень велика и достигает трех с половиной миллионов фертингов. Сообщалось также, что в результате
 //столкновения с бандитами семеро полицейских получили различные повреждения, один же из полицейских, по имени Шмыгль,
 //порвал собственные штаны и потерял в суматохе каску.
+//
+
+import people.*;
+import util.BagSize;
+import util.State;
+import util.Story;
+
 public class Main {
 
     public static void main(String[] args) {
+        Story.start();
+        Policeman Pshigl = new Policeman("Пшигль ", State.ACTIVE);
+        Bandit bandit = new Bandit("Cтрелявший из пистолета ", State.ACTIVE);
+        Shorty HonestShorty = new Shorty("Честный коротышка ", State.ACTIVE);
+        DialogBetweenTwo dialog = new DialogBetweenTwo(Pshigl.getName(),bandit.getName());
+//        d.talk(p1.differ(), b1.differ());
+        Bag bag = new Bag("похищенная из банка сумма", "три миллиона фертингов", BagSize.BIG);
+        Policeman Shpigl = new Policeman("Шпигль ", State.ACTIVE);
+        Police police = new Police("семеро");
+        Bandits bandits = new Bandits();
+        Newspaper newspapers = new Newspaper();
+        FightBanditsAgainstPolice fight = new FightBanditsAgainstPolice(police.getName(), bandits.getName());
 
-        Bandit b1 = new Bandit("Cтрелявший из пистолета ");
-        Shorty s = new Shorty("Честный коротышка ");
-        Policeman p1 = new Policeman("Пшигль ");
-        Policeman p2 = new Policeman("Шпигль ");
-        Police p = new Police("семеро");
-        Bandits b = new Bandits();
-        Dialog d = new Dialog();
-        Bag bag = new Bag("похищенная из банка сумма", "три миллиона фертингов");
-        Newspaper n = new Newspaper();
-        FightEventResult f = new FightEventResult();
+//        b1.say(p.criminalAction());
+//        b1.say(b.criminalAction());
+//        b1.say(s.differBetween(p.getName(),b.getName()));
+        newspapers.staySilentAbout();
+        newspapers.getMessage(bag.getName() + bag.getSize() + bag.getValue());
+        if (police.getState() == State.WIN){
+            newspapers.getMessage(fight.fightEvent() + police.win());
 
-        d.talk(p1.getName(), b1.getName(), p1.differ(), b1.differ());
-        b1.say(p.criminalAction());
-        b1.say(b.criminalAction());
-        b1.say(s.differBetween(p.getName(),b.getName()));
-        n.staySilentAbout(" о других деталях диалога");
-        n.getMessage(bag.getName() + bag.getSize());
-        n.getMessage(bag.getName() + bag.getValue());
-        n.getMessage(f.fightEvent(b.getName(),p.getName()) + p.gotHurtAfterFight());
-        n.getMessage(p2.getName() + p2.ripPants() + " и " + p2.loseHelmet());
+        }
+        else
+        {
+            newspapers.getMessage(fight.fightEvent() + police.lose());
+
+        }
+
+//        n.getMessage(p2.getName() + p2.ripPants() + " и " + p2.loseHelmet());
+        Story.end();
+
+
     }
 }

@@ -1,29 +1,42 @@
 package people;
 
 import util.CriminalGroupOfShorties;
+import util.State;
 
 public class Police implements CriminalGroupOfShorties {
-    private String name = "полицейские ";
+    private String name;
     private String amount;
-    public Police(){
+    private State state;
 
-    }
     public Police(String amount){
+        this.name = "полицейские ";
         this.amount = amount;
-    }
-    public Police(String name, String amount){
-        this.name = name;
-        this.amount = amount;
+        if (((Math.random()))>0.5){
+           this.state = State.WIN;
+        } else {
+            this.state = State.LOSE;
+        };
     }
     public String getName(){
         return name;
+    }
+
+    public State getState() {
+        return state;
     }
 
     public String criminalAction() {
             return name + "действуют заодно с бандитами";
         }
 
-    public String gotHurtAfterFight(){
-        return getName() + "в количестве " + amount + " получили ранения";
+    @Override
+    public String win() {
+        return name +"надрали жопу либерахам и вернули украденное";
     }
+
+    public String lose() {
+        state = State.DAMAGED;
+        return name + "смогли задержать только несколько преступников и " + amount + " из них получили статус " + getState() ;
+    }
+
 }

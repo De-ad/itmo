@@ -1,22 +1,25 @@
 package people;
 
-public class Bandit extends Character {
-    public Bandit(){
-        String name = "бандит";
-    }
+import util.State;
 
-    public Bandit(String name) {
-        super(name);
+public class Bandit extends Being {
+
+    public Bandit(String name, State state) {
+        super(name, state);
     }
 
     @Override
     public String getName() {
         return name;
     }
-
     @Override
-    public String differ() {
-        return "теперешнего полицейского не отличишь от бандита ";
+    public State getState(){
+        return state;
+    }
+
+
+    public String say(String line) {
+        return line;
     }
 
 }

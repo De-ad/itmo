@@ -2,9 +2,11 @@ package people;
 import util.Printable;
 import util.pressAction;
 import java.util.Random;
+import java.util.jar.Pack200;
 
 public class Newspaper implements Printable {
     private String pressType = "Газеты";
+    int random = new Random().nextInt(pressAction.values().length);
 
     @Override
     public String getType() {
@@ -13,13 +15,13 @@ public class Newspaper implements Printable {
 
     @Override
     public void getMessage(String message){
-        String actionType;
-        pressAction action = pressAction.values()[new Random().nextInt(pressAction.values().length)];
+
+        pressAction action = pressAction.values()[random];
         System.out.println(pressType + " " + action.getName() + message);
     }
 
     @Override
-    public void staySilentAbout(String theme) {
-        System.out.println(pressType + " умалчивали" + theme);
+    public void staySilentAbout() {
+        System.out.println(pressType + " умалчивали о других деталях диалога");
     }
 }

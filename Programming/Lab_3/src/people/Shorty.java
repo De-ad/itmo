@@ -1,10 +1,10 @@
 package people;
 
-import java.sql.Struct;
+import util.State;
 
-public class Shorty extends Character{
-    public Shorty(String name){
-        super(name);
+public class Shorty extends Being {
+    public Shorty(String name, State state){
+        super(name, state);
     }
 
     public String differBetween(String GroupOne, String GroupTwo){
