@@ -1,7 +1,8 @@
 package util;
 public interface CriminalGroupOfShorties {
-    public String criminalAction();
+    public void criminalAction();
     public String win();
+    public String lose();
 }
 
 

@@ -20,33 +20,30 @@ public class Main {
         Policeman Pshigl = new Policeman("Пшигль ", State.ACTIVE);
         Bandit bandit = new Bandit("Cтрелявший из пистолета ", State.ACTIVE);
         Shorty HonestShorty = new Shorty("Честный коротышка ", State.ACTIVE);
-        DialogBetweenTwo dialog = new DialogBetweenTwo(Pshigl.getName(),bandit.getName());
-//        d.talk(p1.differ(), b1.differ());
+        DialogBetweenTwo dialog = new DialogBetweenTwo(Pshigl.getName(), bandit.getName());
+        dialog.talk("легко отличить полицейского от бандита", "бандита не отличить от полицейского");
         Bag bag = new Bag("похищенная из банка сумма", "три миллиона фертингов", BagSize.BIG);
-        Policeman Shpigl = new Policeman("Шпигль ", State.ACTIVE);
         Police police = new Police("семеро");
         Bandits bandits = new Bandits();
         Newspaper newspapers = new Newspaper();
         FightBanditsAgainstPolice fight = new FightBanditsAgainstPolice(police.getName(), bandits.getName());
-
-//        b1.say(p.criminalAction());
-//        b1.say(b.criminalAction());
-//        b1.say(s.differBetween(p.getName(),b.getName()));
+        police.criminalAction();
+        bandits.criminalAction();
+        HonestShorty.differBetween(police.getName(),bandits.getName());
         newspapers.staySilentAbout();
+        Policeman Shpigl = new Policeman("Шпигль", State.ACTIVE, State.STAYSTILL);
         newspapers.getMessage(bag.getName() + bag.getSize() + bag.getValue());
-        if (police.getState() == State.WIN){
+        if (police.getState() == State.WIN) {
             newspapers.getMessage(fight.fightEvent() + police.win());
-
-        }
-        else
-        {
+            Shpigl.loseHelmet();
+            Shpigl.ripPants();
+        } else {
             newspapers.getMessage(fight.fightEvent() + police.lose());
-
+            Shpigl.setStateForHelmet();
+            Shpigl.loseHelmet();
+            Shpigl.setStateForPants();
+            Shpigl.ripPants();
         }
-
-//        n.getMessage(p2.getName() + p2.ripPants() + " и " + p2.loseHelmet());
         Story.end();
-
-
     }
 }

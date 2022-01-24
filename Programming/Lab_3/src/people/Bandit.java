@@ -2,7 +2,9 @@ package people;
 
 import util.State;
 
-public class Bandit extends Being {
+public class Bandit extends Being implements Alive {
+    private String line;
+    private boolean said = false;
 
     public Bandit(String name, State state) {
         super(name, state);
@@ -12,14 +14,20 @@ public class Bandit extends Being {
     public String getName() {
         return name;
     }
+
     @Override
     public State getState(){
         return state;
     }
 
-
-    public String say(String line) {
-        return line;
+    @Override
+    public void say(String line) {
+        if (said == false){
+            System.out.println(name + "сказал " + line);
+            said = true;
+        }
+        else{
+            System.out.println(line);
+        }
     }
-
 }

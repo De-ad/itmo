@@ -15,7 +15,6 @@ public abstract class Being {
         }
     }
     public Being(){
-
     }
 
     public void setName(String name) {
@@ -32,14 +31,6 @@ public abstract class Being {
     public State getState(){
         return state;
     }
-//
-//    public String differ() {
-//        return name + "не различает ";
-//    }
-//
-//    public void say(String message) {
-//        System.out.println(name + "сказал: " + message);
-//    }
 
     @Override
     public int hashCode() {

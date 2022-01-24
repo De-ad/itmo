@@ -20,11 +20,15 @@ public class Bandits extends Being implements CriminalGroupOfShorties {
         return name;
     }
 
-    public String criminalAction() {
-        return name + "переодеваются в полицейскую форму, чтобы удобнее было грабить ";
+    public void criminalAction() {
+        System.out.println(name + "переодеваются в полицейскую форму, чтобы удобнее было грабить ");
     }
     @Override
     public String win(){
-        return null;
+        return "бандиты побили всех полицейских и сбежали";
+    }
+    @Override
+    public String lose(){
+        return "бандиты сдались и вернули похищенную сумму";
     }
 }

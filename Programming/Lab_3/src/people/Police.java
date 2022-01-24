@@ -25,14 +25,16 @@ public class Police implements CriminalGroupOfShorties {
         return state;
     }
 
-    public String criminalAction() {
-            return name + "действуют заодно с бандитами";
+
+    public void criminalAction() {
+        System.out.println(name + "действуют заодно с бандитами");
         }
 
     @Override
     public String win() {
         return name +"надрали жопу либерахам и вернули украденное";
     }
+
 
     public String lose() {
         state = State.DAMAGED;

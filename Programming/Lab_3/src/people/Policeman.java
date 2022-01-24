@@ -2,10 +2,22 @@ package people;
 
 import util.State;
 
-public class Policeman extends Being {
-    private String difference = "легко отличить полицейского от бандита";
-    public Policeman(String name, State stateForAlive){
-        super(name, stateForAlive);
+public class Policeman extends Being implements Alive {
+    private String line;
+    Pants pants;
+    Helmet helmet;
+
+    public Policeman(String name, State state){
+        super(name, state);
+    }
+    public Policeman(String name, State state, State stateForPants) {
+        super(name, state);
+        pants = new Pants();
+        helmet = new Helmet();
+    }
+
+    public void say(String line) {
+        System.out.println(name + "сказал" + line);
     }
 
     @Override
@@ -13,45 +25,48 @@ public class Policeman extends Being {
         return name;
     }
 
-
-    public String differ(){
-        return difference;
+    public void setStateForPants(){
+        pants.stateForPants = State.TORN;
+    }
+    public void setStateForHelmet(){
+        helmet.stateForHelmet = State.LOSE;
     }
 
-    public String loseHelmet(){
-        Helmet helmet = new Helmet();
-        if (helmet.getState() == State.TORN)
-            return "потерял каску";
+    public void loseHelmet(){
+        if (helmet.getState() == State.LOSE)
+            System.out.println(name + "'s " + helmet.getName() + " получил статус " + helmet.getState());
         else{
-            return "к счастью ничего не потерял";
+            System.out.println(name + " к счастью ничего не потерял");
         }
     }
 
-    public String ripPants(){
-        Pants pants = new Pants();
+    public void ripPants(){
         if (pants.getState() == State.TORN)
-            return "порвал собственные штаны";
+            System.out.println(name + "'s " + pants.getName() + "получил статус " + pants.getState());
         else{
-            return "к удивлению ничего не порвал...";
+            System.out.println(name + " на удивлению ничего не порвал...");
         }
     }
     class Pants{
-        State state = State.STAYSTILL;
-        public void setState(State state){
-            this.state = state;
-           }
+        private State stateForPants = State.STAYSTILL;
+        private String name = "Штаны ";
         public State getState() {
-            return state;
+            return stateForPants;
+        }
+        public String getName() {
+            return name;
         }
     }
 
     class Helmet{
-        State state = State.STAYSTILL;
-        public void setState(State state){
-            this.state = state;
-        }
+        private String name = "Шлеп";
+        private State stateForHelmet = State.STAYSTILL;
         public State getState() {
-            return state;
+            return stateForHelmet;
+        }
+
+        public String getName() {
+            return name;
         }
     }
 }
