@@ -84,12 +84,7 @@ public class Main {
         if (letters.getState() == State.SENT){
             readers.shareThoughts();
         }
-//        else {
-//            try {
-//                letters.getState();
-//        } catch (IllegalArgumentException e){
-//            System.out.println(e.getMessage());
-//            }}
+
         if (police.getState() == State.WIN){
             newspapers.printLetter(readers.getName());
             newspapers.print("душераздирающую историю о полицейских-не-коррупционерах и подлых бандитах");
