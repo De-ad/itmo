@@ -32,7 +32,7 @@ public class Police implements CriminalGroupOfShorties {
 
     @Override
     public String win() {
-        return name +"надрали жопу либерахам и вернули украденное";
+        return name +"побили бандитов и вернули украденное";
     }
 
 
