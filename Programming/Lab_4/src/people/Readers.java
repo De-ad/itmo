@@ -1,9 +1,9 @@
 package people;
 
 public class Readers extends Being{
-    private String name = "Читатели";
+    
     public Readers(){
-
+        name = "Читатели";
     }
     @Override
     public String getName() {
