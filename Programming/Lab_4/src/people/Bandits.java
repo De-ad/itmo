@@ -4,7 +4,6 @@ import util.CriminalGroupOfShorties;
 import util.State;
 
 public class Bandits extends Being implements CriminalGroupOfShorties {
-    private String name;
     private State state = State.STAYSTILL;
 
     public Bandits() {
